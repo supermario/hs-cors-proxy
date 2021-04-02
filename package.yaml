@@ -1,0 +1,30 @@
+name: hs-cors-proxy
+version: 0.0.1
+synopsis: A Haskell cors-anywhere style CORS proxy
+maintainer: Mario Rogic <hello@mario.net.au>
+github: supermario/hs-cors-proxy
+category: Development
+license: MIT
+
+ghc-options: -Wall
+executable:
+  main: ReverseProxy
+  source-dirs: src
+  dependencies:
+    - base >= 4.9 && < 5
+    - blaze-builder
+    - bytestring
+    - case-insensitive
+    - conduit
+    - conduit-extra
+    - containers
+    - http-client
+    - http-client-tls
+    - http-types
+    - streaming-commons
+    - text
+    - unliftio
+    - wai
+    - wai-logger
+    - warp
+    - word8

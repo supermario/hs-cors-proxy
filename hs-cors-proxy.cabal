@@ -1,0 +1,49 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 890a5a27c4274d57ab3a0bd9cc090b4f4272fcf34391d33226f2af41707899a3
+
+name:           hs-cors-proxy
+version:        0.0.1
+synopsis:       A Haskell cors-anywhere style CORS proxy
+category:       Development
+homepage:       https://github.com/supermario/hs-cors-proxy#readme
+bug-reports:    https://github.com/supermario/hs-cors-proxy/issues
+maintainer:     Mario Rogic <hello@mario.net.au>
+license:        MIT
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/supermario/hs-cors-proxy
+
+executable hs-cors-proxy
+  main-is: ReverseProxy.hs
+  other-modules:
+      Network.HTTP.ReverseProxy
+      Paths_hs_cors_proxy
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -main-is ReverseProxy
+  build-depends:
+      base >=4.9 && <5
+    , blaze-builder
+    , bytestring
+    , case-insensitive
+    , conduit
+    , conduit-extra
+    , containers
+    , http-client
+    , http-client-tls
+    , http-types
+    , streaming-commons
+    , text
+    , unliftio
+    , wai
+    , wai-logger
+    , warp
+    , word8
+  default-language: Haskell2010
