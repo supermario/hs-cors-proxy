@@ -16,7 +16,7 @@ $ hs-cors-proxy
 Starting proxy on 8222...
 ```
 
-Query:
+To query, simply prefix the proxy URL to the HTTP call, i.e `http://example.com/` -> `localhost:8222/http://example.com/`:
 
 ```
 $ curl localhost:8222/http://example.com/
