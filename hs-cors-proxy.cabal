@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 890a5a27c4274d57ab3a0bd9cc090b4f4272fcf34391d33226f2af41707899a3
+-- hash: 197bcf57b6ab7ae8a73136e8492af975b15dcca2c51221e3e468f3d17a91e973
 
 name:           hs-cors-proxy
 version:        0.0.1
@@ -27,7 +27,7 @@ executable hs-cors-proxy
       Paths_hs_cors_proxy
   hs-source-dirs:
       src
-  ghc-options: -Wall -main-is ReverseProxy
+  ghc-options: -Wall -threaded -rtsopts -main-is ReverseProxy
   build-depends:
       base >=4.9 && <5
     , blaze-builder

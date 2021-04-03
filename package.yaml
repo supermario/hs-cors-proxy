@@ -10,6 +10,7 @@ ghc-options: -Wall
 executable:
   main: ReverseProxy
   source-dirs: src
+  ghc-options: [-threaded, -rtsopts]
   dependencies:
     - base >= 4.9 && < 5
     - blaze-builder
